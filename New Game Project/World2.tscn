@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://DirtAutoTile.tres" type="TileSet" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://WorldComplete.tscn" type="PackedScene" id=3]
+
+[node name="World2" type="Node"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+cell_tile_origin = 1
+format = 1
+tile_data = PoolIntArray( 0, 0, 196608, 1, 0, 196609, 2, 0, 196609, 3, 0, 196609, 4, 0, 196609, 5, 0, 196609, 6, 0, 196609, 7, 0, 196609, 8, 0, 196609, 9, 0, 196609, 10, 0, 196609, 11, 0, 196609, 12, 0, 196609, 13, 0, 196609, 14, 0, 196609, 15, 0, 196609, 16, 0, 196610, 18, 0, 5, 65554, 0, 65541, 131072, 0, 5, 131090, 0, 65541, 196608, 0, 65541, 196626, 0, 65541, 262144, 0, 65541, 262160, 5, 0, 262162, 0, 65541, 327680, 0, 65541, 327695, 3, 0, 327696, 5, 0, 327698, 0, 65541, 393216, 0, 65541, 393224, 6, 0, 393231, 3, 0, 393232, 5, 0, 393234, 0, 65541, 458752, 0, 65541, 458767, 3, 0, 458768, 5, 0, 458770, 0, 131077, 524288, 0, 65541, 524303, 3, 0, 524304, 5, 0, 589824, 0, 131077, 589826, 0, 196608, 589827, 0, 196609, 589828, 0, 196609, 589829, 0, 196609, 589830, 0, 196609, 589831, 0, 196609, 589832, 0, 196609, 589833, 0, 196609, 589834, 0, 196609, 589835, 0, 196609, 589836, 0, 196609, 589837, 0, 196609, 589838, 0, 196609, 589839, 0, 196609, 589840, 0, 196610, 589842, 0, 196613 )
+__meta__ = {
+"_edit_lock_": true,
+"_editor_description_": ""
+}
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 128, 160 )
+
+[node name="WorldComplete" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512, 256 )
+next_world = "res://World.tscn"
